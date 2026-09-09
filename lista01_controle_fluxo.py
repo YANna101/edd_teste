@@ -11,3 +11,9 @@ def imprimir_menor(numero1,numero2):
 imprimir_menor(3,5)
 imprimir_menor(3,2)
 imprimir_menor(5,5)
+
+#Escreva uma função que recebe um número n como parâmetro e imprime se n é positivo ou negativo
+def imprimir_sinal(simal1,sinal2):
+    if simal1>=0:
+        print(f"o sinal{simal1}é positivo")
+        elif
