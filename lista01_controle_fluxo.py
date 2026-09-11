@@ -16,4 +16,13 @@ imprimir_menor(5,5)
 def imprimir_sinal(simal1,sinal2):
     if simal1>=0:
         print(f"o sinal{simal1}é positivo")
-        elif
+    
+    elif simal1<0:
+        print(f"o sinal{simal1}é negativo")
+        if sinal2>=0:
+            print(f"o sinal{sinal2}é positivo")
+         
+         elif sinal2<0:
+            print(f"o sinal{sinal2}é negativo")
+
+        
