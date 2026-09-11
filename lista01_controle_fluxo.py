@@ -46,14 +46,9 @@ def soma_maior_que_limite(a,b,limite):
         return True
     else:
         return False
-    numero1 = 58
-    numero2 = 20
-    limite = 100
-    resultado = soma_maior_que_limite(numero1, numero2, limite)
-    if resultado:
-        print(f"A soma de {numero1} e {numero2} é maior que {limite}.")
-    else:
-        print(f"A soma de {numero1} e {numero2} não é maior que {limite}.")
+    
+print(soma_maior_que_limite(10,20,15))
+
 
 
 
@@ -101,11 +96,74 @@ def converter_nota_para_conceito(nota):
         return "E"
     else:
         return "F"
-        print(converter_nota_para_conceito(95))
-        print(converter_nota_para_conceito(85))
-        print(converter_nota_para_conceito(75))
-        print(converter_nota_para_conceito(65))
-        print(converter_nota_para_conceito(55)) 
-        print(converter_nota_para_conceito(45))
-        print(converter_nota_para_conceito(35))
-        print(converter_nota_para_conceito(25))
+
+print(converter_nota_para_conceito(95))
+print(converter_nota_para_conceito(85))
+print(converter_nota_para_conceito(75))
+print(converter_nota_para_conceito(65))
+print(converter_nota_para_conceito(55))
+print(converter_nota_para_conceito(45))
+print(converter_nota_para_conceito(35))
+print(converter_nota_para_conceito(25))
+
+
+
+
+#Escreva uma função que recebe como entrada um número inteiro positivo n e retorne a soma de todos os inteiros positivos menores ou iguais a n.
+
+def soma_inteiros_ate_n(n):
+    soma = 0
+    for i in range(1, n + 1):
+        soma += i
+    return soma
+print(soma_inteiros_ate_n(5))
+print(soma_inteiros_ate_n(10))
+
+
+
+#Escreva uma função que recebe como entrada um número ano e retorna True caso ano seja bissexto. Caso contrário, retorne False.
+
+def eh_bissexto(ano):
+    if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+        return True
+    else:
+        return False
+
+print(eh_bissexto(2020))
+print(eh_bissexto(2021))
+
+
+
+
+
+#Escreva uma função que recebe como entrada um número n e imprime todas as potências de 2 menores ou iguais a n.
+
+def imprimir_potencias_de_2(n):
+    potencia = 1
+    while potencia <= n:
+        print(potencia)
+        potencia *= 2
+
+imprimir_potencias_de_2(16)
+imprimir_potencias_de_2(30)
+
+
+
+
+#Escreva uma função que recebe como entrada um número inteiro positivo n e imprime a representação binária desse número.
+
+def imprimir_representacao_binaria(n):
+    if n < 0:
+        print("O número deve ser positivo.")
+        return
+    binario = ""
+    if n == 0:
+        binario = "0"
+    while n > 0:
+        binario = str(n % 2) + binario
+        n //= 2
+    print(binario)
+    print("Representação binária de 10:")
+imprimir_representacao_binaria(10)
+print("Representação binária de 15:")
+imprimir_representacao_binaria(15)
