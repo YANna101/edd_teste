@@ -24,15 +24,9 @@ def imprimir_sinal(n):
     else:
         print(f"O número {n} é negativo.")
     
-    # if simal1>=0:
-    #     print(f"o sinal{simal1}é positivo")
-    
-    # elif simal1<0:
-    #     print(f"o sinal{simal1}é negativo")
-    #     if sinal2>=0:
-    #         print(f"o sinal{sinal2}é positivo")
-    #     elif sinal2<0:
-    #         print(f"o sinal{sinal2}é negativo")  
+imprimir_sinal(10)
+imprimir_sinal(-2)
+
 
 print("\n\n")
         
@@ -60,8 +54,8 @@ def soma_maior_que_limite(a,b,limite):
     else:
         return False
     
-print("Verifica se 10+20>15: " + soma_maior_que_limite(10,20,15))
-print("Verifica se 10+22>15: " + soma_maior_que_limite(10,2,15))
+print("Verifica se 10+20>15: ", soma_maior_que_limite(10,20,15))
+print("Verifica se 10+22>15: ", soma_maior_que_limite(10,2,15))
 
 print("\n\n")
 
@@ -77,9 +71,9 @@ def quantidade_maior_que_limite(a, b, limite):
         quantidade += 1
     return quantidade
 
-print("Valores (10, 20, 15). Maiores que o limite: "+quantidade_maior_que_limite(10, 20, 15))
-print("Valores (10, 2, 15). Maiores que o limite: "+quantidade_maior_que_limite(10, 2, 15))
-print("Valores (100, 20, 15). Maiores que o limite: "+quantidade_maior_que_limite(100, 20, 15))
+print("Valores (10, 20, 15). Maiores que o limite: ", quantidade_maior_que_limite(10, 20, 15))
+print("Valores (10, 2, 15). Maiores que o limite: ", quantidade_maior_que_limite(10, 2, 15))
+print("Valores (100, 20, 15). Maiores que o limite: ", quantidade_maior_que_limite(100, 20, 15))
 
 print("\n\n")
 
@@ -146,8 +140,8 @@ def soma_inteiros_ate_n(n):
         soma += i
     return soma
 
-print("Soma dos inteiros menores que 5: "+soma_inteiros_ate_n(5))
-print("Soma dos inteiros menores que 10: "+soma_inteiros_ate_n(10))
+print("Soma dos inteiros menores que 5: ", soma_inteiros_ate_n(5))
+print("Soma dos inteiros menores que 10: ", soma_inteiros_ate_n(10))
 
 
 print("\n\n")
@@ -162,8 +156,8 @@ def eh_bissexto(ano):
     else:
         return False
 
-print("2020 é bissexto? "+eh_bissexto(2020))
-print("2021 é bissexto? "+eh_bissexto(2021))
+print("2020 é bissexto? ", eh_bissexto(2020))
+print("2021 é bissexto? ", eh_bissexto(2021))
 
 
 
@@ -182,6 +176,7 @@ def imprimir_potencias_de_2(n):
         potencia *= 2
 
 imprimir_potencias_de_2(16)
+print()
 imprimir_potencias_de_2(30)
 
 
