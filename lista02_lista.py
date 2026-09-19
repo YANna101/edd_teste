@@ -114,3 +114,17 @@ def concatenar(x):
 # Testando a função
 print(concatenar("Hello, "))  # Saída: Hello, Hello,
 print(concatenar([1, 2, 3]))  # Saída: [1, 2, 3, 1, 2, 3]
+
+
+
+
+#atividade2
+print("Atividade 2")
+
+#Escreva uma função que recebe como entrada uma lista de números e retorna True se um número passado como parâmetro está presente na lista.
+def esta_presente(lista, numero):
+    return numero in lista
+
+# Testando a função
+print(esta_presente([1, 2, 3, 4, 5], 3))  # Saída: True
+print(esta_presente([1, 2, 3, 4, 5], 6))  # Saída: False
