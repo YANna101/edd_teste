@@ -128,3 +128,48 @@ def esta_presente(lista, numero):
 # Testando a função
 print(esta_presente([1, 2, 3, 4, 5], 3))  # Saída: True
 print(esta_presente([1, 2, 3, 4, 5], 6))  # Saída: False
+
+
+
+
+
+
+#atividade3
+print("Atividade 3")
+#Escreva uma função que recebe como entrada uma lista ordenada de números e retorna o índice do primeiro elemento maior que um elementO limite. Se nenhum elemento da lista for maior que o limite desejado, retorne o valor -1.
+def indice_maior_que_limite(lista, limite):
+    for i in range(len(lista)):
+        if lista[i] > limite:
+            return i
+    return -1
+# Testando a função
+print(indice_maior_que_limite([1, 2, 3, 4, 5], 3))  # Saída: 3
+print(indice_maior_que_limite([1, 2, 3, 4, 5], 5))  # Saída: -1
+
+
+
+
+
+
+
+#atividade4
+print("Atividade 4")
+#Escreva uma função que recebe como entrada uma lista de números e retorna a soma de todos os elementos da lista.
+def soma_lista(lista):
+    return sum(lista)
+
+# Testando a função
+print(soma_lista([1, 2, 3, 4, 5]))  # Saída: 15
+
+
+
+
+
+#atividade5
+print("Atividade 5")
+#Listas em Python possuem o método reverse, que inverte o conteúdo da lista. Sua tarefa é implementar uma função chamada inverte, que possui a mesma funcionalidade básica da função reverse em Python. Por exemplo, dada a lista [1, 2, 3, 4, 5, 6, 7], sua função deve retornar [7, 6, 5, 4, 3, 2, 1].
+def inverte(lista):
+    return lista[::-1]
+
+# Testando a função
+print(inverte([1, 2, 3, 4, 5, 6, 7]))  # Saída: [7, 6, 5, 4, 3, 2, 1]
