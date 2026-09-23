@@ -173,3 +173,57 @@ def inverte(lista):
 
 # Testando a função
 print(inverte([1, 2, 3, 4, 5, 6, 7]))  # Saída: [7, 6, 5, 4, 3, 2, 1]
+
+
+
+
+
+
+
+#atividade6
+print("Atividade 6")
+#Suponha que lhe seja fornecida uma lista de números. Sua tarefa é mover todos os zeros para o final da lista, preservando a ordem dos números diferentes de zero. Por exemplo, dada a lista [0, 1, 0, 3, 12], seu programa deve retornar [1, 3, 12, 0, 0].
+def mover_zeros_para_final(lista):
+    # Cria uma nova lista para armazenar os números diferentes de zero
+    numeros_diferentes_de_zero = [num for num in lista if num != 0]
+    # Conta quantos zeros existem na lista original
+    quantidade_de_zeros = lista.count(0)
+    # Adiciona os zeros ao final da nova lista
+    numeros_diferentes_de_zero.extend([0] * quantidade_de_zeros)
+    return numeros_diferentes_de_zero
+
+# Testando a função
+print(mover_zeros_para_final([0, 1, 0, 3, 12]))  # Saída: [1, 3, 12, 0, 0]
+
+
+
+
+
+
+
+#atividade7
+print("Atividade 7")
+#matiz de tres por três
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+#função que recebe uma matriz e retorna a soma de todos os elementos da matriz.
+def soma_matriz(matriz):
+    soma = 0
+    for linha in matriz:
+        soma += sum(linha)
+    return soma
+
+# Testando a função
+print(soma_matriz(matriz))  # Saída: 45
+
+
+
+
+
+#atividade8
+print("Atividade 8")
+#crie uma lista de tipos de carros, e depois crie uma função que recebe essa lista e retorna uma nova lista com os carros que começam com a letra "A".
+def carros_com_a(lista_carros):
+    return [carro for carro in lista_carros if carro.startswith("A")]
+
+# Testando a função
+print(carros_com_a(["Audi", "BMW", "Acura", "Ford"]))  # Saída: ["Audi", "Acura"]
