@@ -13,3 +13,9 @@ print("Questão 02")
 # # Modificando um dicionário.
 paies["Brasil"] = "Rio de Janeiro"
 print("Dicionário de países e capitais após modificação: ", paies)
+
+# Adicionando um elemento.
+espanha = {"Espanha": "Madri"}
+paies.update(espanha)
+print("Dicionário de países e capitais após adição: ", paies)
+
