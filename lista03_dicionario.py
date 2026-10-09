@@ -58,3 +58,41 @@ livro = {"título": "O Senhor dos Anéis", "autor": "J.R.R. Tolkien", "ano": 195
 print("Título: ", livro["título"])
 print("Autor: ", livro["autor"])
 print("Ano: ", livro["ano"])
+
+# Exercício 7
+print("Questão 07")
+# dicionário com informações de um carro
+carro = {"marca": "Toyota", "modelo": "Corolla", "ano": 2020}
+# Acessando valores do dicionário
+print("Marca: ", carro["marca"])
+
+
+# exercicio 8.1
+# dicionario com uma palava
+palavra="abracadabra" # ['u', 'v', 'a']
+freqs = dict()
+for ch in palavra:
+    if ch not in freqs:
+        freqs[ch] = 1
+    else:
+        freqs[ch] += 1
+
+print(freqs) # {'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1}
+
+
+
+# exercicio 8.2
+print("questão 08")
+# quando a chave não esta
+palavra = "borboleta"
+freqs = dict()
+for ch in palavra:
+    if ch not in freqs:
+        freqs[ch] = 1
+    else:
+        freqs[ch] += 1
+
+print(freqs) # {'b':2 , 'o':2 ,'r':1 ,'l':1 ,'e':1 ,'t':1,'a':1} 
+
+
+
