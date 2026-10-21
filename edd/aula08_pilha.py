@@ -66,24 +66,6 @@ if __name__ == "__main__":
 # minhas pilhas de frutas e números usando a pilha do professor pilha 1 frutas 
 
 
-        
-        # pilha 2 números
-class pilha_numeros:
-    def __init__(self):
-        self.pilha = Pilha()
-
-    def adicionar_numero(self, numero):
-        self.pilha.empilhar(numero)
-
-    def remover_numero(self):
-        return self.pilha.desempilhar().dado
-
-    def listar_numeros(self):
-        self.pilha.listar_pilha()
-        print("Tamanho da pilha de números:", self.pilha.tamanho())
-        print("Número no topo da pilha:", self.pilha.topo().dado)
-    
-
 # exemplo teste de uso das pilhas de frutas e números pilha 3
 if __name__ == "__main__":
     # Testando a pilha de frutas
