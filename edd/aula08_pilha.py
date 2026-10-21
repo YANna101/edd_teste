@@ -62,33 +62,3 @@ if __name__ == "__main__":
     print("Topo da pilha:", pilha.topo().dado)
     print("Tamanho da pilha:", pilha.tamanho())
 
-
-# minhas pilhas de frutas e números usando a pilha do professor pilha 1 frutas 
-
-
-# exemplo teste de uso das pilhas de frutas e números pilha 3
-if __name__ == "__main__":
-    # Testando a pilha de frutas
-    pilha_frutas_exemplo = pilha_frutas()
-    pilha_frutas_exemplo.adicionar_fruta("Maçã")
-    pilha_frutas_exemplo.adicionar_fruta("Banana")
-    pilha_frutas_exemplo.adicionar_fruta("Laranja")
-    pilha_frutas_exemplo.listar_frutas()
-    
-    print("Removendo fruta:", pilha_frutas_exemplo.remover_fruta())
-    pilha_frutas_exemplo.listar_frutas()
-    
-    # Testando a pilha de números
-    pilha_numeros_exemplo = pilha_numeros()
-    pilha_numeros_exemplo.adicionar_numero(1)
-    pilha_numeros_exemplo.adicionar_numero(2)
-    pilha_numeros_exemplo.adicionar_numero(3)
-    pilha_numeros_exemplo.listar_numeros()
-    
-    print("Removendo número:", pilha_numeros_exemplo.remover_numero())
-    pilha_numeros_exemplo.listar_numeros()
-    
-    
-    
-    
-    
