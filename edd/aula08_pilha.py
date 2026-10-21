@@ -65,25 +65,7 @@ if __name__ == "__main__":
 
 # minhas pilhas de frutas e números usando a pilha do professor pilha 1 frutas 
 
-# exemplo de uso da pilha
-# conversão de frutas em uma pilha
-class pilha_frutas:
-    def __init__(self):
-        self.pilha = Pilha()
 
-    def adicionar_fruta(self, fruta):
-        self.pilha.empilhar(fruta)
-
-    def remover_fruta(self):
-        return self.pilha.desempilhar().dado
-
-    def listar_frutas(self):
-        self.pilha.listar_pilha()
-        print("Tamanho da pilha de frutas:", self.pilha.tamanho())
-        print("Frutas no topo da pilha:", self.pilha.topo().dado)
-        
-        
-        
         
         # pilha 2 números
 class pilha_numeros:
