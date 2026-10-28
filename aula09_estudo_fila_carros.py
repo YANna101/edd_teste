@@ -1,4 +1,4 @@
-from aula09_estudo_fila import FilaCarros  # type: ignore[reportMissingImports]
+from aula09_fila import fila
 class FilaCarrosEstudo(FilaCarros):
     def __init__(self):
         super().__init__()
@@ -15,3 +15,8 @@ class FilaCarrosEstudo(FilaCarros):
             print("Carro no início da fila:", self.inicio().dado)
         else:
             print("A fila está vazia.")
+            
+       
+       if __name__ == "__main__":
+    fila_carros_exemplo = FilaCarrosEstudo()
+    fila_carros_exemplo.adicionar_carro("Carro A")
