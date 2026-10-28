@@ -6,36 +6,57 @@ class Fila:
         self._inicio = None
         self._fim = None
         self._tamanho = 0
+        
+        
+    @property
+    def inicio(self) -> No: # get_start
+        return self._inicio
+    
+    @inicio.setter
+    def inicio(self, no: No) -> None: # set_start
+        self._inicio = no
+
+    @property
+    def fim(self) -> No: # get_end
+        return self._fim
+
+    @fim.setter
+    def fim(self, no: No) -> None: # set_end
+        self._fim = no
 
     def esta_vazia(self) -> bool: # is_empty
-        return self._inicio is None
+        return self.inicio is None
 
     def enfileirar(self, item) -> None: # put ou enqueue
         novo_no = No(item)
         if self.esta_vazia(): # situação 01
-            self._inicio = novo_no
-            self._fim = novo_no
+            self.inicio = novo_no
+            self.fim = novo_no
         else: # situação 02
-            self._fim.prox = novo_no
-            self._fim = novo_no
+            self.fim.prox = novo_no
+            self.fim = novo_no
         self._tamanho += 1
 
     def desenfileirar(self) -> No: # remove ou dequeue
         if self.esta_vazia():
             raise IndexError("A fila está vazia.")
         else:
-            no_removido = self._inicio
-            self._inicio = self._inicio.prox
-            if self._inicio is None:
-                self._fim = None
+            no_removido = self.inicio
+            self.inicio = self.inicio.prox
+            if self.inicio is None:
+                self.fim = None
             self._tamanho -= 1
+    
+            # print(f"Desenfileirando: {no_removido.dado}")
+
             return no_removido
+   
         
     def consultar_inicio(self) -> No: # get ou peek
         if self.esta_vazia():
             raise IndexError("A fila está vazia.")
         else:
-            return self._inicio
+            return self.inicio
         
     def tamanho(self) -> int: # size
         return self._tamanho
@@ -45,7 +66,7 @@ class Fila:
             print("A fila está vazia.")
         else:
             print("Elementos da fila:")
-            no_atual = self._inicio
+            no_atual = self.inicio
             while no_atual is not None:
                 print(no_atual.dado)
                 no_atual = no_atual.prox
