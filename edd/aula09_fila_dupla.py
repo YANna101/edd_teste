@@ -92,3 +92,8 @@ class FilaDupla(fila.Fila):
                     return valor_removido
 
                 def remover_fim(self):
+                    valor_removido = super().remover_fim()
+                    if not self.esta_vazia():
+                        self._fim.proximo = self._inicio
+                        self._inicio.anterior = self._fim
+                    return valor_removido                 
