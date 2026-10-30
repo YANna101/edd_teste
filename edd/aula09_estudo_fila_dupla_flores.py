@@ -59,22 +59,22 @@ class FilaDupla(fila.Fila):
         while atual is not None:
             print(atual.valor, end=" ")
         print()
-        
-        class FilaDuplaFlores(FilaDupla):
-            def __init__(self):
-                super().__init__()
 
-            def inserir_flor_inicio(self, flor):
-                self.inserir_inicio(flor)
+class Flores(FilaDupla):
+    def __init__(self):
+        super().__init__()
 
-            def inserir_flor_fim(self, flor):
-                self.inserir_fim(flor)
+    def inserir_flor_inicio(self, flor):
+        self.inserir_inicio(flor)
 
-            def remover_flor_inicio(self):
-                return self.remover_inicio()
+    def inserir_flor_fim(self, flor):
+        self.inserir_fim(flor)
 
-            def remover_flor_fim(self):
-                return self.remover_fim()
+    def remover_flor_inicio(self):
+        return self.remover_inicio()
 
-            def imprimir_flores(self):
-                self.imprimir()
+    def remover_flor_fim(self):
+        return self.remover_fim()
+
+    def imprimir_flores(self):
+        self.imprimir()
