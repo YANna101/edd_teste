@@ -67,3 +67,28 @@ class FilaDupla(fila.Fila):
                 print(atual.valor, end=" ")
                 atual = atual.anterior
             print()
+            
+            class FilaDuplaCircular(FilaDupla):
+                def __init__(self):
+                    super().__init__()
+                    self._fim.proximo = self._inicio
+                    self._inicio.anterior = self._fim
+
+                def inserir_inicio(self, valor):
+                    super().inserir_inicio(valor)
+                    self._fim.proximo = self._inicio
+                    self._inicio.anterior = self._fim
+
+                def inserir_fim(self, valor):
+                    super().inserir_fim(valor)
+                    self._fim.proximo = self._inicio
+                    self._inicio.anterior = self._fim
+
+                def remover_inicio(self):
+                    valor_removido = super().remover_inicio()
+                    if not self.esta_vazia():
+                        self._fim.proximo = self._inicio
+                        self._inicio.anterior = self._fim
+                    return valor_removido
+
+                def remover_fim(self):
