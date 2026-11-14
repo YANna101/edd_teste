@@ -1,38 +1,79 @@
-from aula09_fila import Fila
+
+from aula09_fila_dupla import FilaDupla
 
 class Tatarugas:
+    def __init__(self, nome, especie, nome_cientifico):
+        self.nome = nome
+        self.especie = especie
+        self.nome_cientifico = nome_cientifico
+
+    def __str__(self):
+        return f"{self.nome} ({self.especie} - {self.nome_cientifico})"
+
+class Tartarugas(FilaDupla):
     def __init__(self):
-        self.fila1 = Fila()
-        self.fila2 = Fila()
+        self._itens = []
 
-    def adicionar_versiculo(self, especie,nome, versiculo):
-        if especie == "Tartaruga1":
-            self.fila1.enfileirar(versiculo)
-        elif especie == "Tartaruga2":
-            self.fila2.enfileirar(versiculo)
+    def esta_vazia(self):
+        return not self._itens
 
-    def remover_versiculo(self):
-        if not self.fila1.esta_vazia():
-            return self.fila1.desenfileirar()
-        if not self.fila2.esta_vazia():
-            return self.fila2.desenfileirar()
-        return None
+    def tamanho(self):
+        return len(self._itens)
 
-    def mostrar_versiculos(self):
-        return self.fila1.mostrar() + self.fila2.mostrar()
-    
+    def inserir_inicio(self, tartaruga):
+        self._itens.insert(0, tartaruga)
+
+    def inserir_fim(self, tartaruga):
+        self._itens.append(tartaruga)
+
+    def remover_inicio(self):
+        if self.esta_vazia():
+            raise IndexError("A fila dupla está vazia")
+        return self._itens.pop(0)
+
+    def remover_fim(self):
+        if self.esta_vazia():
+            raise IndexError("A fila dupla está vazia")
+        return self._itens.pop()
+
+    def primeiro(self):
+        if self.esta_vazia():
+            raise IndexError("A fila dupla está vazia")
+        return self._itens[0]
+
+    def ultimo(self):
+        if self.esta_vazia():
+            raise IndexError("A fila dupla está vazia")
+        return self._itens[-1]
+
+    def __len__(self):
+        return self.tamanho()
+
+    def __iter__(self):
+        return iter(self._itens)
+
+
 if __name__ == "__main__":
-    tatarugas = Tatarugas()
-    tatarugas.adicionar_versiculo("Tartaruga1","Leonardo", "João 3:16")
-    tatarugas.adicionar_versiculo("Tartaruga2","Michelangelo", "Salmos 23:1")
-    tatarugas.adicionar_versiculo("Tartaruga1","Donatello", "Filipenses 4:13")
+    fila_tartarugas = Tartarugas()
 
-    print("Versículos das Tartarugas:")
-    print(tatarugas.mostrar_versiculos())
+    tartaruga1 = Tatarugas("Tartaruga-oliva", "Tartaruga Oliva", "Lepidochelys olivacea")
+    tartaruga2 = Tatarugas("Tartaruga-de-couro", "Tartaruga de Couro", "Dermochelys coriacea")
+    tartaruga3 = Tatarugas("Tartaruga-cabeçuda", "Tartaruga Cabeçuda", "Caretta caretta")
+    tartaruga4 = Tatarugas("Tartaruga verde", "Tartaruga Verde", "Chelonia mydas")
 
-    versiculo_removido = tatarugas.remover_versiculo()
-    print(f"Versículo removido: {versiculo_removido}")
+    fila_tartarugas.inserir_fim(tartaruga1)
+    fila_tartarugas.inserir_fim(tartaruga2)
+    fila_tartarugas.inserir_inicio(tartaruga3)
+    fila_tartarugas.inserir_inicio(tartaruga4)
 
-    print("Versículos restantes das Tartarugas:")
-    print(tatarugas.mostrar_versiculos())
-        
+    print("Fila de Tartarugas:")
+    for tartaruga in fila_tartarugas:
+        print(tartaruga)
+
+    print("\nRemovendo a primeira tartaruga:", fila_tartarugas.remover_inicio())
+    print("Removendo a última tartaruga:", fila_tartarugas.remover_fim())
+
+    print("\nFila de Tartarugas após remoções:")
+    for tartaruga in fila_tartarugas:
+        print(tartaruga)
+                
