@@ -1,6 +1,5 @@
 from no import No
 
-
 class ListaLigada:
     def __init__(self):
         self.inicio = None
@@ -16,7 +15,7 @@ class ListaLigada:
         if self.inicio is None:
             print("A lista está vazia!")
             return None
-        removido = self.inicio.valor
+        removido = self.inicio.dado
         self.inicio = self.inicio.proximo
         return removido
 
@@ -25,12 +24,11 @@ class ListaLigada:
         atual = self.inicio
         elementos = []
         while atual is not None:
-            elementos.append(str(atual.valor))
+            elementos.append(str(atual.dado))
             atual = atual.proximo
         print(" -> ".join(elementos) + " -> None")
-        
-        
 
+# Exemplo de uso:
 if __name__ == "__main__":
     lista = ListaLigada()
     lista.inserir_no_inicio(10)
@@ -40,3 +38,8 @@ if __name__ == "__main__":
     
     lista.remover_do_inicio()
     lista.exibir()  # Saída: 20 -> 10 -> None
+
+    
+
+
+

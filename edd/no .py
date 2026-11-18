@@ -1,6 +1,7 @@
 class No:
-    def __init__(self, valor):
+    def __init__(self, valor, proximo=None, nome=None):
         self.valor = valor
-        self.proximo = None
+        self.proximo = proximo
+        self.nome = nome
         
         
