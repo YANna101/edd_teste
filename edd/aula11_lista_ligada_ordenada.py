@@ -8,7 +8,7 @@ class ListaLigadaOrdenada:
     def inserir(self, dado):
         novo_no = No(dado)
         # caso 1 e 2: a lista está vazia ou o novo dado é menor que o primeiro elemento
-        if self.inicio is None or self.inicio.dado > dado: 
+        if self.esta_vazia() or self.inicio.dado > dado: 
             novo_no.proximo = self.inicio
             self.inicio = novo_no
         else:
@@ -21,7 +21,7 @@ class ListaLigadaOrdenada:
 
     # Remove um elemento específico da lista
     def remover(self, dado) -> None:
-        if self.inicio is None:
+        if self.esta_vazia():
             print("A lista está vazia!")
             return None
         
