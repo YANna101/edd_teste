@@ -6,3 +6,10 @@ class No:
         self.prox = prox
         
     
+    def __gt__(self, other: No) -> bool:
+        return self.dado > other.dado
+    
+    
+    def __str__(self) -> str:
+        return str(self.dado)
+    

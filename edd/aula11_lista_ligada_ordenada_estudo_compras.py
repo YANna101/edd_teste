@@ -1,12 +1,11 @@
-from no import No
-from edd.aula11_lista_ligada import ListaLigada
+# from no import No
+from aula11_lista_ligada_ordenada import ListaLigadaOrdenada
 
-class ListaCompras(ListaLigada):
-    def __init__(self,produto):
+class ListaCompras(ListaLigadaOrdenada):
+    def __init__(self):
         super().__init__()
-        self.produto = produto
     def adicionar_item(self, item):
-        self.adicionar(item)
+        self.inserir(item)
 
     def remover_item(self, item):
         self.remover(item)

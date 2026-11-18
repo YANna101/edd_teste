@@ -1,12 +1,12 @@
-from edd.aula11_lista_ligada import ListaLigada
-from no import No
+from aula11_lista_ligada_ordenada import ListaLigadaOrdenada
+# from no import No
 
-class ListaFlores(ListaLigada):
+class ListaFlores(ListaLigadaOrdenada):
     def __init__(self):
         super().__init__()
 
     def adicionar_flor(self, flor):
-        self.adicionar(flor)
+        self.inserir(flor)
 
     def remover_flor(self, flor):
         self.remover(flor)
